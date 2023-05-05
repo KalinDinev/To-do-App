@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/style.css" />
+
+      <title>Notes</title>
+   </head>
+   <body>
+      <header class="heading">
+         <p>Simple to-do app</p>
+      </header>
+
+      <main class="main">
+         <div class="container-main">
+            <form class="form">
+               <div class="first-row">
+                  <input
+                     type="text"
+                     name="title"
+                     id="title"
+                     placeholder="Title"
+                     class="title"
+                  />
+
+                  <div class="label">
+                     <label for="date">Date:</label>
+                     <input type="date" id="date" name="date" />
+                  </div>
+               </div>
+
+               <input
+                  type="text"
+                  name="description"
+                  id="description"
+                  placeholder="Task"
+                  class="description"
+               />
+               <button type="submit" id="createBtn" class="create">Create</button>
+            </form>
+         </div>
+      </main>
+
+      <section class="table-task">
+         <label for="pet-select">Sort By:</label>
+         <select class="sort" title="sort">
+            <option value="">--Please choose an option--</option>
+            <option value="title">Title</option>
+            <option value="date">Date</option>
+         </select>
+      </section>
+
+      <div class="row">
+         <p id="description">Description</p>
+         <p id="title">Title</p>
+         <p id="date">Date</p>
+         <p id="deleteBtn">Delete Task</p>
+
+      </div>
+     
+      <div class="task">
+         <p class="task-description">Need to make apointment</p>
+         <p class="task-title">doctor</p>
+         <p class="task-date">28.24.2023</p>
+         <button class="deleteBtn">Delete</button>
+      </div>
+
+      <div class="task">
+         <p id="task-description">Need to make apointment</p>
+         <p id="task-title">doctor</p>
+         <p id="task-date">28.24.2023</p>
+         <button class="deleteBtn">Delete</button>
+      </div> 
+   </body>
+   <script src="/app.js"></script>
+</html>
