@@ -2,179 +2,117 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Rubik Wet Paint', cursive;
 }
 
 body {
-   background-color: lightblue;
+   background-color: mediumslateblue;
+   color: whitesmoke;
+   font-family: 'Rubik Wet Paint', cursive;
+   max-height: 100%;
+   max-width: 100%;
 }
 
-.main {
-   margin-top: 2rem;
+header {
+   font-size: 1.5rem;
+}
+
+.to-do-form {
+   display: flex;
+   align-items: center;
+   min-width: fit-content;
+   max-width: 100%;
+   flex-wrap: wrap;
+}
+
+header,
+form {
+   min-height: 20vh;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
-.heading {
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   margin-top: 2rem;
-   width: 100%;
-}
-
-.heading p {
-   font-size: -webkit-xxx-large;
-   margin: 1.5rem;
-   text-shadow: -1px -8px 9px #000000eb;
-}
-
-.container-main {
-   display: flex;
-   width: 100%;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-}
-
-div.label {
-   margin-left: 3rem;
-}
-div.label label {
-   font-size: 20px;
-}
-
-.first-row {
-   display: flex;
-}
-
-.form {
-   display: grid;
-   width: 50%;
-   margin-top: 1.5rem;
-}
-
-form .title {
-   width: 33%;
-}
-form .description {
-   height: 3rem;
-   width: 85%;
-}
-
-.form input {
-   margin: 6px;
-   padding: 6px;
-   border: 2px solid double;
-   border-radius: 10px;
-   background-color: lightyellow;
-   font-size: 15px;
-   border-color: hsla(41, 70%, 50%, 0.764);
-}
-
-form .title::placeholder {
-   font-size: 1.2rem;
-   color: rgba(15, 38, 49, 0.99);
-}
-form .description::placeholder {
-   font-size: 1.2rem;
-   color: rgba(15, 38, 49, 0.99);
-}
-
+form input,
 form button {
-   display: flex;
-   width: 20%;
-   height: 2rem;
-   margin-left: 13rem;
-   margin-top: 0.5rem;
-   align-items: center;
-   justify-content: space-evenly;
-   border: 3px solid hsla(41, 70%, 50%, 0.764);
-   border-radius: 15px;
-   background-color: lightyellow;
-   font-size: 15px;
+   padding: 0.5rem;
+   padding-left: 1rem;
+   font-size: 1.8rem;
+   background: whitesmoke;
+   border-radius: 2rem;
+   border-color: transparent;
+   font-family: 'Rubik Wet Paint', cursive;
+
+}
+input:focus-visible {
+   /* outline-offset: 0px; */
+   outline-color: transparent;
+}
+form button {
+   color: rgb(255, 200, 0);
+   background: transparent;
+   border-color: transparent;
+   cursor: pointer;
+   transition: all 0.3 ease;
+   margin-left: 0.2rem;
 }
 
 form button:hover {
-   background-color: coral;
+   color: whitesmoke;
+   background: rgb(255, 200, 0);
+   width: fit-content;
 }
 
-.table-task {
+.fa-solid.fa-circle-plus.fa-lg {
+   margin-top: 0.3rem;
+   margin-left: -8px;
+   font: size 3px;
+}
+
+.todo-container {
    display: flex;
    justify-content: center;
-   margin: 2rem;
-   flex-wrap: nowrap;
    align-items: center;
 }
 
-/* .tasks {
-  display: flex;
-  width: 20%;
-  flex-direction: column;
-   
-} */
-.progres {
-   font-size: large;
-   text-shadow: 1px -7px 7px #000000eb;
+.todo-list-items {
+   min-width: 30%;
+   list-style: none;
 }
-
-.finished {
-   font-size: large;
-   text-shadow: 1px -7px 7px #000000eb;
-}
-
-.buttons{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin-top: 4px;
-}
-
-.coral{
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  border: 3px solid hsla(41, 70%, 50%, 0.764);
-  border-radius: 15px;
-  background-color: lightyellow;
-  font-size: 15px;
-}
-button:hover{
-  background-color: coral;
-}
-
-.task-title{
-  margin-top: 0.8rem;
-  text-shadow: 0px 0px 0px #000000eb;
-}
-.row{
+.each-todo {
+   margin: 0.5rem;
+   padding-left: 0.5rem;
+   background: rgb(255, 255, 255);
+   color: rgba(0, 0, 0, 0.266);
+   font-size: 1.5rem;
    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: nowrap;
-    font-size: 1.2rem;
-    text-shadow: 0px -3px 7px black;
+   justify-content: space-between;
+   align-items: center;
+   transition: 0.5s;
+   /* border-radius: 2rem; */
+   border-top-left-radius: 2rem;
+   border-bottom-left-radius: 2rem;
+}
+.text-item {
+   flex: 1;
+   color:black
 }
 
-.task{
-   display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 0.8rem;
-    border: 2px outset #0037eb7d;
-    background-color: lightyellow;
-    height: 3rem;
-    flex-wrap: nowrap;
+.delete-todo {
+   /* border-top-right-radius: 1.75rem;
+   border-bottom-right-radius: 1.75rem; */
+   font-size: 2.2rem;
+   background: rgb(255, 255, 255);
+   border-color: transparent;
 }
 
-.deleteBtn{
-   display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60%;
-    width: 10%;
-    background-color: transparent;
-    border-radius: 15px;
-    border: 3px solid hsla(41, 70%, 50%, 0.764);
+.delete-todo i{
+   color:rgb(255, 200, 0)
 }
+
+.delete-todo:hover {
+   color: rgb(255, 200, 0);
+   background-color: mediumslateblue;
+   cursor: pointer;
+
+}
+
