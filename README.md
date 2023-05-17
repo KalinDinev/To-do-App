@@ -1,9 +1,9 @@
 # To-do-App
 
-Using Vannila JavaScript
-Saving task in localStorage
-Simple validations and request to delete a task
+1.Using Vannila JavaScript
+2.Saving task in localStorage
+3.Simple validations and request to delete a task
 
 Future Features:
-Adding date on creations
-Filter task's
+1.Adding date on creations
+2.Filter task's
